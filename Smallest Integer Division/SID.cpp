@@ -12,17 +12,12 @@ public:
         int newnum=0;
         int flag=true;
         int count=1;
-        while(num%K != 0 || flag==false){
-            num=num*quo+1;
-            flag=true;
-            count++;
-            if(count == 10){
-                break;
+        for(int i=1;i<100000;i++){
+            count=(count*10+1)%K;
+            if(count == 0){
+                return i+1;
             }
         }
-        if(count == 10){
-            return -1;
-        }
-        return count;
+        return -1;
     }
 };
