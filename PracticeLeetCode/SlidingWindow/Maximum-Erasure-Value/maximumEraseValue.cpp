@@ -1,7 +1,7 @@
-// Topic: Sliding Window/ Monotonique Queue
-// Problem Link: https://leetcode.com/problems/sliding-window-maximum/submissions/
-// Approaches: Use Heap/Multiset O(NlonN) / Use  Monotonic Queue O(N)
-// Difficulty: HARD
+// Topic: Sliding Window
+// Problem Link: https://leetcode.com/problems/maximum-erasure-value/
+// Approaches: Use prefixSum / Standard sliding window technique
+// Difficulty: MEDIUM
 
 #include <bits/stdc++.h>
 using namespace std;
