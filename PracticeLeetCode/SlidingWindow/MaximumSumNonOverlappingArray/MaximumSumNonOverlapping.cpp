@@ -1,5 +1,5 @@
-// Topic: Standard Sliding Window with Prefix Sum
-// Problem Link: https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/
+// Topic: Two Sliding Windows in a single problem [Tricky] Must Practice
+// Problem Link: https://leetcode.com/problems/maximum-sum-of-two-non-overlapping-subarrays/
 // Approaches: O(N)
 // Difficulty: MEDIUM
 
