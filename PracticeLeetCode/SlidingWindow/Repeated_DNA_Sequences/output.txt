@@ -1,0 +1,23 @@
+AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT it First:  AAAAACCCCC it Second:  2 
+ it First:  AAAAAGGGTT it Second:  1 
+ it First:  AAAACCCCCA it Second:  1 
+ it First:  AAAACCCCCC it Second:  1 
+ it First:  AAAAGGGTTT it Second:  1 
+ it First:  AAACCCCCAA it Second:  1 
+ it First:  AAACCCCCCA it Second:  1 
+ it First:  AACCCCCAAA it Second:  1 
+ it First:  AACCCCCCAA it Second:  1 
+ it First:  ACCCCCAAAA it Second:  1 
+ it First:  ACCCCCCAAA it Second:  1 
+ it First:  CAAAAACCCC it Second:  1 
+ it First:  CAAAAAGGGT it Second:  1 
+ it First:  CCAAAAACCC it Second:  1 
+ it First:  CCAAAAAGGG it Second:  1 
+ it First:  CCCAAAAACC it Second:  1 
+ it First:  CCCAAAAAGG it Second:  1 
+ it First:  CCCCAAAAAC it Second:  1 
+ it First:  CCCCAAAAAG it Second:  1 
+ it First:  CCCCCAAAAA it Second:  2 
+ it First:  CCCCCCAAAA it Second:  1 
+ AAAAACCCCC   CCCCCAAAAA   
+ 
