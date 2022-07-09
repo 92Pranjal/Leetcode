@@ -38,51 +38,28 @@ public:
         }
         return res;
     }
-    int lengthOfLongestSubstringKDistinct(string s, int k)
+    int longestSubstring(string s, int k)
     {
         int n = s.length(), length = 0, maxLength = INT_MIN, l = 0, r;
-        unordered_map<char, int> mp;
-        if (k == 0)
+        if (n == 0 || n < k)
             return 0;
-        for (r = 0; r < n; r++)
+        if (k <= 1)
+            return s.length();
+        unordered_map<char, int> mp;
+        for (char c : s)
         {
-            // write("Map Size: ", mp.size());
-            mp.find(s[r]) == mp.end() ? mp[s[r]] = 1 : mp[s[r]]++;
-            while (mp.size() > k)
-            {
-                length = r - l;
-                // write("\nLength: ", length);
-                // write("\nMap Size: ", mp.size(), "\nCharacter: ", s[l], "\n L: ", l, "\n", "Map Value: ", mp[s[l]]);
-
-                if (mp[s[l]] > 1)
-                {
-                    mp[s[l]] = mp[s[l]] - 1;
-                }
-                else
-                {
-                    mp.erase(s[l]);
-                }
-                if (length > maxLength)
-                {
-                    maxLength = length;
-                }
-                l++;
-            }
+            mp[c] += 1;
         }
-        // write("L: ", l, "\n");
-        // write("R: ", r, "\n");
-        // write("Map Size: ", mp.size());
-        // write("Max Length: ", maxLength);
-        // write("Length: ", length);
-        if (length > maxLength)
-            maxLength = length;
 
-        if (mp.size() <= k && maxLength < r - l)
-        {
-            // write("\nEntering here!!");
-            maxLength = r - l;
-        }
-        return maxLength;
+        while (l < n && mp[s[l]] >= k)
+            l++;
+        if (l >= n - 1)
+            return l;
+        int ls1 = longestSubstring(s.substr(0, l), k);
+        while (l < n && mp[s[l]] < k)
+            l++;
+        int ls2 = l < n ? longestSubstring(s.substr(l), k) : 0;
+        return max(ls1, ls2);
     }
 
     void printVector(vector<int> vec)
@@ -120,7 +97,7 @@ int main()
     Solution *sb = new Solution();
     // sb->printVector(input);
     int ans;
-    ans = sb->lengthOfLongestSubstringKDistinct(s, k);
+    ans = sb->longestSubstring(s, k);
     write(ans);
     // sb->printVectorString(ans);
 }
